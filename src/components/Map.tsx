@@ -20,7 +20,7 @@ export default function LiveMap() {
     const map = new maplibregl.Map({
       container: mapContainer.current!,
       //style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
-      style: `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${process.env.STADIA_API_KEY}`,
+      style: `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${process.env.NEXT_PUBLIC_STADIA_API_KEY}`,
       center: [0, 0],
       zoom: 1.5,
     });
