@@ -1,13 +1,18 @@
 import RecentFlightsPanel from '../components/RecentFlightsPanel';
 import FlightSearchPanel from '../components/FlightSearchPanel';
+import Map from '../components/Map';
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-12 px-6">
-      <div className="col-span-3">
+    <div className="relative h-screen w-screen overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Map />
+      </div>
+
+      <div className="absolute top-6 left-6 z-10 space-y-6">
         <RecentFlightsPanel />
       </div>
-      <div className="col-start-10 col-span-3">
+      <div className="absolute top-6 right-6 z-10 space-y-6">
         <FlightSearchPanel />
       </div>
     </div>
