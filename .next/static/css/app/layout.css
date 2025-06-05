@@ -70,10 +70,28 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v4.1.8 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
+    --color-red-100: oklch(93.6% 0.032 17.717);
+    --color-red-800: oklch(44.4% 0.177 26.899);
+    --color-yellow-100: oklch(97.3% 0.071 103.193);
+    --color-yellow-800: oklch(47.6% 0.114 61.907);
+    --color-green-100: oklch(96.2% 0.044 156.743);
+    --color-green-800: oklch(44.8% 0.119 151.328);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --radius-lg: 0.5rem;
     --default-font-family: var(--font-geist-sans);
     --default-mono-font-family: var(--font-geist-mono);
   }
@@ -224,46 +242,150 @@
   }
 }
 @layer utilities {
+  .col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+  .col-start-10 {
+    grid-column-start: 10;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-\[5px\] {
+    margin-top: 5px;
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .flex {
+    display: flex;
+  }
   .grid {
     display: grid;
   }
-  .min-h-screen {
-    min-height: 100vh;
+  .w-\[100px\] {
+    width: 100px;
   }
-  .grid-rows-\[20px_1fr_20px\] {
-    grid-template-rows: 20px 1fr 20px;
+  .grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
   .items-center {
     align-items: center;
   }
-  .justify-items-center {
-    justify-items: center;
+  .justify-between {
+    justify-content: space-between;
   }
-  .gap-16 {
-    gap: calc(var(--spacing) * 16);
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
-  .pb-20 {
-    padding-bottom: calc(var(--spacing) * 20);
+  .rounded-lg {
+    border-radius: var(--radius-lg);
   }
-  .font-\[family-name\:var\(--font-geist-sans\)\] {
-    font-family: var(--font-geist-sans);
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
+  .bg-green-100 {
+    background-color: var(--color-green-100);
+  }
+  .bg-red-100 {
+    background-color: var(--color-red-100);
+  }
+  .bg-yellow-100 {
+    background-color: var(--color-yellow-100);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .pt-\[30px\] {
+    padding-top: 30px;
+  }
+  .pr-1 {
+    padding-right: calc(var(--spacing) * 1);
+  }
+  .pb-\[20px\] {
+    padding-bottom: 20px;
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-green-800 {
+    color: var(--color-green-800);
+  }
+  .text-red-800 {
+    color: var(--color-red-800);
+  }
+  .text-yellow-800 {
+    color: var(--color-yellow-800);
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  .sm\:p-20 {
-    @media (width >= 40rem) {
-      padding: calc(var(--spacing) * 20);
-    }
-  }
 }
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+@layer utilities {
+  .bg-black-70 {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .scrollbar-dark-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #000;
+  }
+  .scrollbar-dark-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-dark-thin::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 9999px;
+  }
+  .scrollbar-dark-thin::-webkit-scrollbar-track {
+    background-color: #000;
+    border-radius: 9999px;
+  }
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -276,6 +398,29 @@ body {
   background-image: url('/images/world.jpg');
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+    }
+  }
 }
 
 /*!***********************************************************************************************************************************************************************************************************************************************************************!*\

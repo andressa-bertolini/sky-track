@@ -12,6 +12,28 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer utilities {
+  .bg-black-70 {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .scrollbar-dark-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #000;
+  }
+  .scrollbar-dark-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-dark-thin::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 9999px;
+  }
+  .scrollbar-dark-thin::-webkit-scrollbar-track {
+    background-color: #000;
+    border-radius: 9999px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
