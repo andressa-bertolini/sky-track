@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
-const mockFlights = [
+const mockFlights: { id: number; coords: maplibregl.LngLatLike }[] = [
   { id: 1, coords: [-46.6333, -23.5505] },
   { id: 2, coords: [-74.006, 40.7128] },
   { id: 3, coords: [2.3522, 48.8566] },
