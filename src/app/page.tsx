@@ -1,5 +1,5 @@
-import RecentFlightsPanel from '../components/RecentFlightsPanel';
-import FlightSearchPanel from '../components/FlightSearchPanel';
+import RecentFlights from '../components/RecentFlights';
+import FlightSearch from '../components/FlightSearch';
 import Map from '../components/Map';
 
 export default function Home() {
@@ -10,10 +10,10 @@ export default function Home() {
       </div>
 
       <div className="absolute top-6 left-6 z-10 space-y-6">
-        <RecentFlightsPanel />
+        <RecentFlights />
       </div>
       <div className="absolute top-6 right-6 z-10 space-y-6">
-        <FlightSearchPanel />
+        <FlightSearch />
       </div>
     </div>
   );

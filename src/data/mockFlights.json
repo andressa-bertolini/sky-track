@@ -1,0 +1,462 @@
+[
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Greater Peoria",
+      "timezone": "America/Chicago",
+      "iata": "PIA",
+      "icao": "KPIA",
+      "terminal": null,
+      "gate": null,
+      "delay": 10,
+      "scheduled": "2025-06-07T02:00:00+00:00",
+      "estimated": "2025-06-07T02:00:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Philadelphia International",
+      "timezone": "America/New_York",
+      "iata": "PHL",
+      "icao": "KPHL",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T04:46:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "East Coast Jets",
+      "iata": null,
+      "icao": "ECJ"
+    },
+    "flight": {
+      "number": "88",
+      "iata": null,
+      "icao": "ECJ88",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Bolzano",
+      "timezone": "Europe/Rome",
+      "iata": "BZO",
+      "icao": "LIPB",
+      "terminal": null,
+      "gate": null,
+      "delay": 7,
+      "scheduled": "2025-06-07T08:30:00+00:00",
+      "estimated": "2025-06-07T08:30:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Lamezia Terme",
+      "timezone": "Europe/Rome",
+      "iata": "SUF",
+      "icao": "LICA",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T10:30:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "Swiss Global Air Lines",
+      "iata": "LZ",
+      "icao": "SWU"
+    },
+    "flight": {
+      "number": "1902",
+      "iata": "LZ1902",
+      "icao": "SWU1902",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Mus",
+      "timezone": "Europe/Istanbul",
+      "iata": "MSR",
+      "icao": "LTCK",
+      "terminal": null,
+      "gate": null,
+      "delay": 5,
+      "scheduled": "2025-06-07T09:10:00+00:00",
+      "estimated": "2025-06-07T09:10:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Sabiha Gokcen",
+      "timezone": "Europe/Istanbul",
+      "iata": "SAW",
+      "icao": "LTFJ",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T11:20:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "Pegasus",
+      "iata": "PC",
+      "icao": "PGT"
+    },
+    "flight": {
+      "number": "2491",
+      "iata": "PC2491",
+      "icao": "PGT2491",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Minsk National 2",
+      "timezone": "Europe/Minsk",
+      "iata": "MSQ",
+      "icao": "UMMS",
+      "terminal": null,
+      "gate": null,
+      "delay": null,
+      "scheduled": "2025-06-07T10:00:00+00:00",
+      "estimated": "2025-06-07T10:00:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Domodedovo",
+      "timezone": "Europe/Moscow",
+      "iata": "DME",
+      "icao": "UUDD",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T11:25:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "Belavia",
+      "iata": "B2",
+      "icao": "BRU"
+    },
+    "flight": {
+      "number": "957",
+      "iata": "B2957",
+      "icao": "BRU957",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Kobe",
+      "timezone": "Asia/Tokyo",
+      "iata": "UKB",
+      "icao": "RJBE",
+      "terminal": "2",
+      "gate": "9-13",
+      "delay": null,
+      "scheduled": "2025-06-07T16:00:00+00:00",
+      "estimated": "2025-06-07T16:00:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Nanjing Lukou International Airport",
+      "timezone": "Asia/Shanghai",
+      "iata": "NKG",
+      "icao": "ZSNJ",
+      "terminal": "2",
+      "gate": null,
+      "baggage": "2",
+      "scheduled": "2025-06-07T17:30:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "Juneyao Airlines",
+      "iata": "HO",
+      "icao": "DKH"
+    },
+    "flight": {
+      "number": "1508",
+      "iata": "HO1508",
+      "icao": "DKH1508",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Kobe",
+      "timezone": "Asia/Tokyo",
+      "iata": "UKB",
+      "icao": "RJBE",
+      "terminal": null,
+      "gate": null,
+      "delay": null,
+      "scheduled": "2025-06-07T15:35:00+00:00",
+      "estimated": "2025-06-07T15:35:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Niigata",
+      "timezone": "Asia/Tokyo",
+      "iata": "KIJ",
+      "icao": "RJSN",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T17:15:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "empty",
+      "iata": null,
+      "icao": null
+    },
+    "flight": {
+      "number": "504",
+      "iata": null,
+      "icao": null,
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Kobe",
+      "timezone": "Asia/Tokyo",
+      "iata": "UKB",
+      "icao": "RJBE",
+      "terminal": null,
+      "gate": null,
+      "delay": null,
+      "scheduled": "2025-06-07T15:10:00+00:00",
+      "estimated": "2025-06-07T15:10:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Kagoshima",
+      "timezone": "Asia/Tokyo",
+      "iata": "KOJ",
+      "icao": "RJFK",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T16:20:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "Skymark Airlines",
+      "iata": "BC",
+      "icao": "SKY"
+    },
+    "flight": {
+      "number": "135",
+      "iata": "BC135",
+      "icao": "SKY135",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Mariscal Sucre",
+      "timezone": "America/Guayaquil",
+      "iata": "UIO",
+      "icao": "SEQM",
+      "terminal": null,
+      "gate": null,
+      "delay": null,
+      "scheduled": "2025-06-07T01:40:00+00:00",
+      "estimated": "2025-06-07T01:40:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "Tocumen International",
+      "timezone": "America/Panama",
+      "iata": "PTY",
+      "icao": "MPTO",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T03:38:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "Copa Airlines",
+      "iata": "CM",
+      "icao": "CMP"
+    },
+    "flight": {
+      "number": "210",
+      "iata": "CM210",
+      "icao": "CMP210",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Mariscal Sucre",
+      "timezone": "America/Guayaquil",
+      "iata": "UIO",
+      "icao": "SEQM",
+      "terminal": null,
+      "gate": null,
+      "delay": null,
+      "scheduled": "2025-06-07T01:40:00+00:00",
+      "estimated": "2025-06-07T01:40:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "El Salvador International",
+      "timezone": "America/El_Salvador",
+      "iata": "SAL",
+      "icao": "MSLP",
+      "terminal": null,
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T03:25:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "SA AVIANCA",
+      "iata": "AV",
+      "icao": "AVA"
+    },
+    "flight": {
+      "number": "456",
+      "iata": "AV456",
+      "icao": "AVA456",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  },
+  {
+    "flight_date": "2025-06-07",
+    "flight_status": "scheduled",
+    "departure": {
+      "airport": "Mariscal Sucre",
+      "timezone": "America/Guayaquil",
+      "iata": "UIO",
+      "icao": "SEQM",
+      "terminal": null,
+      "gate": null,
+      "delay": null,
+      "scheduled": "2025-06-07T01:40:00+00:00",
+      "estimated": "2025-06-07T01:40:00+00:00",
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "arrival": {
+      "airport": "El Nuevo Dorado International",
+      "timezone": "America/Bogota",
+      "iata": "BOG",
+      "icao": "SKBO",
+      "terminal": "1",
+      "gate": null,
+      "baggage": null,
+      "scheduled": "2025-06-07T03:10:00+00:00",
+      "delay": null,
+      "estimated": null,
+      "actual": null,
+      "estimated_runway": null,
+      "actual_runway": null
+    },
+    "airline": {
+      "name": "SA AVIANCA",
+      "iata": "AV",
+      "icao": "AVA"
+    },
+    "flight": {
+      "number": "66",
+      "iata": "AV66",
+      "icao": "AVA66",
+      "codeshared": null
+    },
+    "aircraft": null,
+    "live": null
+  }
+]

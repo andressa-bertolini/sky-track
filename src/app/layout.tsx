@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ReduxProvider } from '@/store/ReduxProvider';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,7 +32,9 @@ export default function RootLayout({
       >
         <Navbar />
         <main>
-          {children}
+          <ReduxProvider>
+            {children}
+          </ReduxProvider>
         </main>
       </body>
     </html>
