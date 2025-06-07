@@ -36,11 +36,11 @@ export default function RecentFlightsPanel() {
     <div className="recent-flights">
       <h2 className="text-xl font-semibold mb-2">Recent Flights</h2>
       <ul className="recent-flights-container scrollbar-dark-thin space-y-3 pr-1">
-        {mockFlights.map((flight) => {
+        {mockFlights.map((flight, index) => {
           const isDelayed = flight.departure.delay && flight.departure.delay > 0;
           return(
           <li
-            key={flight.id}
+            key={index}
             className="bg-black-70 border border-gray-200 rounded-lg p-4"
           >
             <p className="font-medium">
