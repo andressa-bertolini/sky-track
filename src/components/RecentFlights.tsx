@@ -1,29 +1,45 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchFlights } from '../store/flightsSlice';
-import { RootState } from '@/store';
+// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+//import { fetchFlights } from '../store/flightsSlice';
+//import { RootState } from '@/store';
 
 import './RecentFlights.css';
-import airports from '@/data/airports.json';
+import rawAirports from '@/data/airports.json';
+
+const airports = rawAirports as Record<string, Airport>;
 import mockFlights from '@/data/mockFlights.json';
 
-function getAirportInfo(iata: string) {
-  return airports[iata];
+function getAirportInfo(code: string): Airport | undefined {
+  return airports[code];
 }
 
-type Flight = {
-  id: string;
-  origin: string;
-  destination: string;
-  departure: string;
-  status: 'on time' | 'delayed' | 'cancelled';
+type Airport = {
+  icao: string;
+  iata: string | null;
+  name: string;
+  city: string;
+  state: string;
+  country: string;
+  elevation: number;
+  lat: number;
+  lon: number;
+  tz: string;
 };
+
+// type Flight = {
+//   id: string;
+//   origin: string;
+//   destination: string;
+//   departure: string;
+//   status: 'on time' | 'delayed' | 'cancelled';
+// };
 
 export default function RecentFlightsPanel() {
   const dispatch = useDispatch();
-  const { flights, loading } = useSelector((state: RootState) => state.flights);
+  //const { flights, loading } = useSelector((state: RootState) => state.flights);
 
   useEffect(() => {
     //dispatch(fetchFlights() as any);
