@@ -44,7 +44,7 @@ export default function RecentFlightsPanel() {
   useEffect(() => {
     //dispatch(fetchFlights() as any);
     //console.log(flights);
-    console.log("airports:");
+    //console.log("airports:");
     //console.log(airports);
   }, [dispatch]);
 

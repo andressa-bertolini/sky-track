@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import flightsReducer from './flightsSlice'; // ou o nome do seu slice
+import flightsReducer from './flightsSlice';
 
 export const store = configureStore({
   reducer: {
