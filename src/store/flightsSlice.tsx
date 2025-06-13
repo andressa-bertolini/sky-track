@@ -1,28 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getActiveFlights } from '../services/flightsService';
-
-interface Flight {
-  icao24: string;
-  callsign: string;
-  origin_country: string;
-  time_position: number | null;
-  last_contact: number;
-  longitude: number | null;
-  latitude: number | null;
-  baro_altitude: number | null;
-  on_ground: boolean;
-  velocity: number | null;
-  true_track: number | null;
-  vertical_rate: number | null;
-  geo_altitude: number | null;
-  squawk: string | null;
-}
-
-interface FlightsState {
-  flights: Flight[];
-  loading: boolean;
-  error: string | null;
-}
+import type { Flight, FlightsState, RawFlightState } from '../types/flights';
 
 export const fetchFlights = createAsyncThunk(
   'flights/fetchFlights', 
@@ -35,29 +13,32 @@ export const fetchFlights = createAsyncThunk(
       }
 
       return states
-        .filter((flight: any[]) => flight && flight.length > 14)
-        .map((flight: any[]) => ({
-          icao24: flight[0] || '',
-          callsign: flight[1]?.trim() || '',
-          origin_country: flight[2] || '',
-          time_position: flight[3],
-          last_contact: flight[4] || 0,
-          longitude: flight[5],
-          latitude: flight[6],
-          baro_altitude: flight[7],
-          on_ground: flight[8] || false,
-          velocity: flight[9],
-          true_track: flight[10],
-          vertical_rate: flight[11],
-          geo_altitude: flight[13],
-          squawk: flight[14],
-        }))
-        .filter((flight: Flight) => 
-          flight.longitude !== null && 
-          flight.latitude !== null
-        );
-    } catch (error: any) {
-      return rejectWithValue(error.message || 'Error');
+      .filter((flight: RawFlightState) => flight && flight.length > 14)
+      .map((flight: RawFlightState): Flight => ({
+        icao24: flight[0] as string || '',
+        callsign: (flight[1] as string)?.trim() || '',
+        origin_country: flight[2] as string || '',
+        time_position: flight[3] as number | null,
+        last_contact: flight[4] as number,
+        longitude: flight[5] as number | null,
+        latitude: flight[6] as number | null,
+        baro_altitude: flight[7] as number | null,
+        on_ground: flight[8] as number,
+        velocity: flight[9] as number | null,
+        true_track: flight[10] as number | null,
+        vertical_rate: flight[11] as number | null,
+        geo_altitude: flight[13] as number | null,
+        squawk: flight[14] as string | null,
+      }))
+      .filter((flight: Flight) => 
+        flight.longitude !== null && 
+        flight.latitude !== null
+      );
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return rejectWithValue(error.message);
+      }
+      return rejectWithValue('Unknown error');
     }
   }
 );

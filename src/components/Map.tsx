@@ -1,24 +1,14 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect, useRef, useCallback } from 'react';
+import { useAppSelector } from '../store';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import type { Flight } from '../types/flights';
 
-interface Flight {
-  icao24: string;
-  callsign: string;
-  origin_country: string;
-  longitude: number | null;
-  latitude: number | null;
-  baro_altitude: number | null;
-  velocity: number | null;
-  true_track: number | null;
-  on_ground: boolean;
-}
 
 export default function LiveMap() {
-  const { flights, loading } = useSelector((state: any) => state.flights);
+  const { flights, loading } = useAppSelector((state) => state.flights);
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<maplibregl.Marker[]>([]);
@@ -28,17 +18,17 @@ export default function LiveMap() {
     markersRef.current = [];
   };
 
-  const addFlightMarkers = (map: maplibregl.Map, flightsData: Flight[]) => {
+  const addFlightMarkers = useCallback((map: maplibregl.Map, flightsData: Flight[]) => {
     clearMarkers();
-
+  
     const validFlights = flightsData.filter(
-      (flight) => 
-        flight.longitude !== null && 
+      (flight) =>
+        flight.longitude !== null &&
         flight.latitude !== null &&
-        flight.longitude !== undefined && 
+        flight.longitude !== undefined &&
         flight.latitude !== undefined
     );
-
+  
     validFlights.forEach((flight) => {
       const el = document.createElement('div');
       el.className = 'airplane-marker';
@@ -48,12 +38,12 @@ export default function LiveMap() {
       el.style.backgroundSize = 'contain';
       el.style.backgroundRepeat = 'no-repeat';
       el.style.cursor = 'pointer';
-      
+  
       if (flight.true_track !== null && flight.true_track !== undefined) {
         el.style.transform = `rotate(${flight.true_track}deg)`;
       }
-
-      const popup = new maplibregl.Popup({ 
+  
+      const popup = new maplibregl.Popup({
         offset: 25,
         closeButton: false,
         closeOnClick: false,
@@ -72,29 +62,29 @@ export default function LiveMap() {
           </div>
         </div>
       `);
-
-      const marker = new maplibregl.Marker({ 
+  
+      const marker = new maplibregl.Marker({
         element: el,
         anchor: 'center'
       })
         .setLngLat([flight.longitude!, flight.latitude!])
         .addTo(map);
-
+  
       el.addEventListener('mouseenter', () => {
         popup.setLngLat([flight.longitude!, flight.latitude!]).addTo(map);
       });
-
+  
       el.addEventListener('mouseleave', () => {
         popup.remove();
       });
-
+  
       markersRef.current.push(marker);
     });
-  };
+  }, []);
 
   useEffect(() => {
     if (mapInstance.current) return;
-
+  
     const map = new maplibregl.Map({
       container: mapContainer.current!,
       style: `https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json?api_key=${process.env.NEXT_PUBLIC_STADIA_API_KEY}`,
@@ -103,25 +93,25 @@ export default function LiveMap() {
       pitch: 0,
       bearing: 0
     });
-
+  
     mapInstance.current = map;
-
+  
     map.on('load', () => {
       if (flights && flights.length > 0) {
         addFlightMarkers(map, flights);
       }
     });
-
+  
     return () => {
       clearMarkers();
       map.remove();
       mapInstance.current = null;
     };
-  }, []);
+  }, [addFlightMarkers, flights]);
 
   useEffect(() => {
     if (!mapInstance.current || !flights) return;
-    
+  
     if (mapInstance.current.loaded()) {
       addFlightMarkers(mapInstance.current, flights);
     } else {
@@ -129,7 +119,7 @@ export default function LiveMap() {
         addFlightMarkers(mapInstance.current!, flights);
       });
     }
-  }, [flights]);
+  }, [flights, addFlightMarkers]);
 
   return (
     <div className="relative h-full w-full">
