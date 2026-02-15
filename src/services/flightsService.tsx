@@ -1,6 +1,6 @@
 import mockFlights from '../data/mockFlights.json';
 
-const USE_MOCK_DATA = true;
+const USE_MOCK_DATA = true; 
 
 interface AviationStackLiveData {
   latitude: number | null;
@@ -59,6 +59,11 @@ export async function getActiveFlights({
   }
   
   const apiKey = process.env.NEXT_PUBLIC_AVIATIONSTACK_API_KEY;
+  
+  if (!apiKey) {
+    throw new Error('AviationStack API key is not configured');
+  }
+  
   const baseUrl = 'http://api.aviationstack.com/v1/flights';
   
   const params = new URLSearchParams({
