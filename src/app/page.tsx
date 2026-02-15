@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFlights } from '../store/flightsSlice';
 import { RootState, AppDispatch } from '../store';
-// import RecentFlights from '../components/RecentFlights';
-// import FlightSearch from '../components/FlightSearch';
+import RecentFlights from '../components/RecentFlights';
+import FlightSearch from '../components/FlightSearch';
 import Map from '../components/Map';
 
 export default function Home() {
@@ -47,12 +47,12 @@ export default function Home() {
         </div>
       )}
 
-      {/* <div className="absolute top-6 left-6 z-10 space-y-6">
+      <div className="absolute top-6 left-6 z-10 space-y-6">
         <RecentFlights />
-      </div> /}
-      {/ <div className="absolute top-6 right-6 z-10 space-y-6">
+      </div>
+      <div className="absolute top-6 right-6 z-10 space-y-6">
         <FlightSearch />
-      </div> */}
+      </div>
     </div>
   );
 }
