@@ -30,6 +30,7 @@ export default function LiveMap() {
     );
   
     validFlights.forEach((flight) => {
+      console.log(flight);
       const el = document.createElement('div');
       el.className = 'airplane-marker';
       el.style.width = '15px';
@@ -39,26 +40,58 @@ export default function LiveMap() {
       el.style.backgroundRepeat = 'no-repeat';
       el.style.cursor = 'pointer';
   
-      if (flight.true_track !== null && flight.true_track !== undefined) {
-        el.style.transform = `rotate(${flight.true_track}deg)`;
+      // Usar heading ao invés de true_track (AviationStack usa "heading")
+      if (flight.heading !== null && flight.heading !== undefined) {
+        el.style.transform = `rotate(${flight.heading}deg)`;
       }
   
+      // Popup melhorado com origem e destino
+      const originText = flight.origin?.airport 
+        ? `${flight.origin.airport} (${flight.origin.iata || flight.origin.icao})`
+        : flight.origin?.iata || flight.origin?.icao || 'Unknown';
+      
+      const destinationText = flight.destination?.airport
+        ? `${flight.destination.airport} (${flight.destination.iata || flight.destination.icao})`
+        : flight.destination?.iata || flight.destination?.icao || 'Unknown';
+
       const popup = new maplibregl.Popup({
         offset: 25,
         closeButton: false,
         closeOnClick: false,
         closeOnMove: false
       }).setHTML(`
-        <div class="flight-popup">
-          <h3 style="margin: 0 0 2px 0; font-weight: bold; color: #333;">
+        <div class="flight-popup" style="min-width: 200px;">
+          <h3 style="margin: 0 0 8px 0; font-weight: bold; color: #333; font-size: 14px;">
             ${flight.callsign || flight.icao24}
           </h3>
-          <div style="font-size: 12px; color: #666;">
-            <p style="margin: 0">
-              ${flight.origin_country}
-              &nbsp;→&nbsp;
-              Australia
-            </p>
+          
+          <div style="font-size: 12px; color: #666; line-height: 1.6;">
+            ${flight.airline ? `<p style="margin: 0 0 6px 0; color: #444;"><strong>${flight.airline}</strong></p>` : ''}
+            
+            <div style="margin: 4px 0;">
+              <span style="color: #22c55e;">📍 From:</span><br/>
+              <span style="padding-left: 16px;">${originText}</span>
+            </div>
+            
+            <div style="margin: 4px 0;">
+              <span style="color: #3b82f6;">🛬 To:</span><br/>
+              <span style="padding-left: 16px;">${destinationText}</span>
+            </div>
+            
+            ${flight.altitude ? `
+              <div style="margin-top: 6px; padding-top: 6px; border-top: 1px solid #eee;">
+                <span style="color: #888;">Altitude: ${Math.round(flight.altitude)}m</span>
+                ${flight.velocity ? ` • <span style="color: #888;">Speed: ${Math.round(flight.velocity)} km/h</span>` : ''}
+              </div>
+            ` : ''}
+            
+            ${flight.status ? `
+              <div style="margin-top: 4px;">
+                <span style="background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 11px; color: #666;">
+                  ${flight.status}
+                </span>
+              </div>
+            ` : ''}
           </div>
         </div>
       `);
@@ -127,7 +160,13 @@ export default function LiveMap() {
       
       {loading && (
         <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg text-sm">
-          Loading...
+          Loading flights...
+        </div>
+      )}
+      
+      {!loading && flights && flights.length === 0 && (
+        <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-3 py-2 rounded-lg text-sm">
+          No active flights found
         </div>
       )}
     </div>

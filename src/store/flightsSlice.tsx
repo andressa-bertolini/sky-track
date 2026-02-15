@@ -1,36 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getActiveFlights } from '../services/flightsService';
-import type { Flight, FlightsState, RawFlightState } from '../types/flights';
+import type { Flight, FlightsState } from '../types/flights';
 
 export const fetchFlights = createAsyncThunk(
   'flights/fetchFlights', 
   async (_, { rejectWithValue }) => {
     try {
-      const states = await getActiveFlights();
+      const flights = await getActiveFlights();
       
-      if (!states || !Array.isArray(states)) {
+      if (!flights || !Array.isArray(flights)) {
         return [];
       }
 
-      return states
-      .filter((flight: RawFlightState) => flight && flight.length > 14)
-      .map((flight: RawFlightState): Flight => ({
-        icao24: flight[0] as string || '',
-        callsign: (flight[1] as string)?.trim() || '',
-        origin_country: flight[2] as string || '',
-        time_position: flight[3] as number | null,
-        last_contact: flight[4] as number,
-        longitude: flight[5] as number | null,
-        latitude: flight[6] as number | null,
-        baro_altitude: flight[7] as number | null,
-        on_ground: flight[8] as number,
-        velocity: flight[9] as number | null,
-        true_track: flight[10] as number | null,
-        vertical_rate: flight[11] as number | null,
-        geo_altitude: flight[13] as number | null,
-        squawk: flight[14] as string | null,
-      }))
-      .filter((flight: Flight) => 
+      // Os dados mockados já vêm no formato correto!
+      // Apenas filtrar voos com lat/long válidos
+      return flights.filter((flight: Flight) => 
         flight.longitude !== null && 
         flight.latitude !== null
       );

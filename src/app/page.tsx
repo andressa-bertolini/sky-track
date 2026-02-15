@@ -11,7 +11,7 @@ import Map from '../components/Map';
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();
-  const { loading, error } = useSelector((state: RootState) => state.flights);
+  const { flights, loading, error } = useSelector((state: RootState) => state.flights);
 
   useEffect(() => {
     dispatch(fetchFlights());
