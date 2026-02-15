@@ -4,14 +4,13 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchFlights } from '../store/flightsSlice';
 import { RootState, AppDispatch } from '../store';
-
 // import RecentFlights from '../components/RecentFlights';
 // import FlightSearch from '../components/FlightSearch';
 import Map from '../components/Map';
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();
-  const { flights, loading, error } = useSelector((state: RootState) => state.flights);
+  const { loading, error } = useSelector((state: RootState) => state.flights);
 
   useEffect(() => {
     dispatch(fetchFlights());

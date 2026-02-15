@@ -12,8 +12,6 @@ export const fetchFlights = createAsyncThunk(
         return [];
       }
 
-      // Os dados mockados já vêm no formato correto!
-      // Apenas filtrar voos com lat/long válidos
       return flights.filter((flight: Flight) => 
         flight.longitude !== null && 
         flight.latitude !== null

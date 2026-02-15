@@ -40,12 +40,10 @@ export default function LiveMap() {
       el.style.backgroundRepeat = 'no-repeat';
       el.style.cursor = 'pointer';
   
-      // Usar heading ao invés de true_track (AviationStack usa "heading")
       if (flight.heading !== null && flight.heading !== undefined) {
         el.style.transform = `rotate(${flight.heading}deg)`;
       }
   
-      // Popup melhorado com origem e destino
       const originText = flight.origin?.airport 
         ? `${flight.origin.airport} (${flight.origin.iata || flight.origin.icao})`
         : flight.origin?.iata || flight.origin?.icao || 'Unknown';
