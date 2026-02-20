@@ -1,8 +1,8 @@
 ## ✈️ SkyTrack
 
-<img src="https://andressabertolini.com/static/media/project-sky-track.568d144f8fa0eace5af4.jpg" alt="SkyTrack Thumbnail" width="300" />
+<img src="./thumbnail.jpg" alt="SkyTrack Thumbnail" width="300" />
 
-**SkyTrack** is a flight tracking map showing real-time airplane positions. Includes search functionality.
+**SkyTrack** is a flight tracking map showing real-time airplane positions.
 
 <a href="https://sky-track-app.vercel.app/" target="_blank">
   <img src="https://img.shields.io/badge/Live%20Demo-0095ea?style=for-the-badge" alt="Ver projeto">
@@ -23,12 +23,6 @@
 **Assets:**
 - Map: [MapLibre](https://maplibre.org/)
 - API: [Aviationstack](https://aviationstack.com/)
-
-<br>
-
-## ✨ Features
-
-- Recent Flights
 
 <br>
 
