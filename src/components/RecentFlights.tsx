@@ -37,15 +37,17 @@ export default function RecentFlightsPanel({limit}: RecentFlightsPanelProps) {
       <ul className="recent-flights-container scrollbar-dark-thin space-y-3 sm:pr-1">
         {mockFlights.slice(0, flightsToDisplay).map((flight, index) => {
 
-          let statusColor;
+          let statusClasses;
           
           switch (flight.status){
             case 'delayed':
-              statusColor = 'yellow';
+              statusClasses = 'bg-yellow-100 text-yellow-800';
               break;
             case 'on time':
-              statusColor = 'green';
+              statusClasses = 'bg-green-100 text-green-800';
               break;
+            default:
+              statusClasses = 'bg-gray-100 text-gray-800';
           }
 
           return(
@@ -68,7 +70,7 @@ export default function RecentFlightsPanel({limit}: RecentFlightsPanelProps) {
                 </p>
               </div>
               <span
-                className={`text-xs font-semibold mt-[5px] px-[6px] rounded-full bg-${statusColor}-100 text-${statusColor}-800`}
+                className={`text-xs font-semibold mt-[5px] px-[6px] rounded-full ${statusClasses}`}
               >
                 {flight.status}
               </span>
