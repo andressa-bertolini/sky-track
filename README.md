@@ -2,7 +2,7 @@
 
 <img src="./thumbnail.jpg" alt="SkyTrack Thumbnail" width="300" />
 
-**SkyTrack** is a flight tracking map showing real-time airplane positions.
+**SkyTrack** is an interactive flight tracking map that displays airplane positions and flight information.
 
 <a href="https://sky-track-app.vercel.app/" target="_blank">
   <img src="https://img.shields.io/badge/Live%20Demo-0095ea?style=for-the-badge" alt="Ver projeto">
@@ -22,7 +22,7 @@
 
 **Assets:**
 - Map: [MapLibre](https://maplibre.org/)
-- API: [Aviationstack](https://aviationstack.com/)
+- Flight data: Static JSON dataset (mocked data for demonstration purposes)
 
 <br>
 
