@@ -48,7 +48,7 @@ export default function Home() {
       )}
 
       <div className="absolute bottom-6 sm:bottom-auto sm:top-6 left-2 right-2 sm:left-6 sm:right-auto z-10 space-y-6">
-        <RecentFlights limit="10"/>
+        <RecentFlights limit={10}/>
       </div>
       {/* <div className="absolute top-6 right-6 z-10 space-y-6">
         <FlightSearch />

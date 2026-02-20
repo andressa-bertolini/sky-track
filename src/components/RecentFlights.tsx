@@ -23,7 +23,11 @@ type Airport = {
   tz: string;
 };
 
-export default function RecentFlightsPanel({limit}) {
+type RecentFlightsPanelProps = {
+  limit?: number;
+}
+
+export default function RecentFlightsPanel({limit}: RecentFlightsPanelProps) {
 
   const flightsToDisplay = limit ? limit : mockFlights.length;
 
