@@ -2,3 +2,15 @@
   height: calc(100vh - 160px);
   overflow-y: scroll;
 }
+
+@media(max-width: 920px) {
+  .recent-flights-container {
+    height: 250px;
+  }
+}
+
+@media(max-width: 567px) {
+  .recent-flights-container {
+    height: 150px;
+  }
+}

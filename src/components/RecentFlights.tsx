@@ -23,15 +23,27 @@ type Airport = {
   tz: string;
 };
 
-export default function RecentFlightsPanel() {
+export default function RecentFlightsPanel({limit}) {
+
+  const flightsToDisplay = limit ? limit : mockFlights.length;
 
   return (
     <div className="recent-flights">
       <h2 className="text-xl font-semibold mb-2">Recent Flights</h2>
-      <ul className="recent-flights-container scrollbar-dark-thin space-y-3 pr-1">
-        {mockFlights.map((flight, index) => {
-          const isDelayed = false;
+      <ul className="recent-flights-container scrollbar-dark-thin space-y-3 sm:pr-1">
+        {mockFlights.slice(0, flightsToDisplay).map((flight, index) => {
+
+          let statusColor;
           
+          switch (flight.status){
+            case 'delayed':
+              statusColor = 'yellow';
+              break;
+            case 'on time':
+              statusColor = 'green';
+              break;
+          }
+
           return(
           <li
             key={index}
@@ -52,10 +64,7 @@ export default function RecentFlightsPanel() {
                 </p>
               </div>
               <span
-                className={`text-xs font-semibold mt-[5px] px-[6px] rounded-full ${
-                  isDelayed ? 'bg-yellow-100 text-yellow-800'
-                  : 'bg-green-100 text-green-800'
-                }`}
+                className={`text-xs font-semibold mt-[5px] px-[6px] rounded-full bg-${statusColor}-100 text-${statusColor}-800`}
               >
                 {flight.status}
               </span>

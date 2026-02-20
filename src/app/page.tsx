@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchFlights } from '../store/flightsSlice';
 import { RootState, AppDispatch } from '../store';
 import RecentFlights from '../components/RecentFlights';
-import FlightSearch from '../components/FlightSearch';
+// import FlightSearch from '../components/FlightSearch';
 import Map from '../components/Map';
 
 export default function Home() {
@@ -47,12 +47,12 @@ export default function Home() {
         </div>
       )}
 
-      <div className="absolute top-6 left-6 z-10 space-y-6">
-        <RecentFlights />
+      <div className="absolute bottom-6 sm:bottom-auto sm:top-6 left-2 right-2 sm:left-6 sm:right-auto z-10 space-y-6">
+        <RecentFlights limit="10"/>
       </div>
-      <div className="absolute top-6 right-6 z-10 space-y-6">
+      {/* <div className="absolute top-6 right-6 z-10 space-y-6">
         <FlightSearch />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -21,7 +21,7 @@
     },
     "airline": "Emirates",
     "aircraft": "Boeing 777-300ER",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B8E2D1",
@@ -45,7 +45,7 @@
     },
     "airline": "United Airlines",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "delayed"
   },
   {
     "icao24": "C3F9A7",
@@ -69,7 +69,7 @@
     },
     "airline": "Lufthansa",
     "aircraft": "Airbus A350-900",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D7B4C2",
@@ -93,7 +93,7 @@
     },
     "airline": "British Airways",
     "aircraft": "Boeing 777-300ER",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E4A6D8",
@@ -117,7 +117,7 @@
     },
     "airline": "Air France",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F9C3E1",
@@ -141,7 +141,7 @@
     },
     "airline": "Singapore Airlines",
     "aircraft": "Airbus A380-800",
-    "status": "active"
+    "status": "delayed"
   },
   {
     "icao24": "A7D2F5",
@@ -165,7 +165,7 @@
     },
     "airline": "Qantas",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B2E8C4",
@@ -189,7 +189,7 @@
     },
     "airline": "American Airlines",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "C8F1A9",
@@ -213,7 +213,7 @@
     },
     "airline": "Delta Air Lines",
     "aircraft": "Airbus A330-300",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D3A7B6",
@@ -237,7 +237,7 @@
     },
     "airline": "KLM",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E5C2D7",
@@ -261,7 +261,7 @@
     },
     "airline": "Cathay Pacific",
     "aircraft": "Airbus A350-900",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F1B9D3",
@@ -285,7 +285,7 @@
     },
     "airline": "Japan Airlines",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "A9E4C8",
@@ -309,7 +309,7 @@
     },
     "airline": "Turkish Airlines",
     "aircraft": "Airbus A330-300",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B6D7F2",
@@ -333,7 +333,7 @@
     },
     "airline": "Air Canada",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "C2F8A1",
@@ -357,7 +357,7 @@
     },
     "airline": "Emirates",
     "aircraft": "Airbus A380-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D8A3C6",
@@ -381,7 +381,7 @@
     },
     "airline": "United Airlines",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E7C1B4",
@@ -405,7 +405,7 @@
     },
     "airline": "Lufthansa",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F3D9E5",
@@ -429,7 +429,7 @@
     },
     "airline": "British Airways",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "A4F7C9",
@@ -453,7 +453,7 @@
     },
     "airline": "Air France",
     "aircraft": "Boeing 777-300ER",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B8E2D9",
@@ -477,7 +477,7 @@
     },
     "airline": "Singapore Airlines",
     "aircraft": "Airbus A350-900",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "C6A1F4",
@@ -501,7 +501,7 @@
     },
     "airline": "Qantas",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D2B7E8",
@@ -525,7 +525,7 @@
     },
     "airline": "American Airlines",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E9F3C7",
@@ -549,7 +549,7 @@
     },
     "airline": "Delta Air Lines",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F5A8D1",
@@ -573,7 +573,7 @@
     },
     "airline": "KLM",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "A1D6C3",
@@ -597,7 +597,7 @@
     },
     "airline": "Cathay Pacific",
     "aircraft": "Airbus A350-900",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B7F2E9",
@@ -621,7 +621,7 @@
     },
     "airline": "Japan Airlines",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "C9A4D8",
@@ -645,7 +645,7 @@
     },
     "airline": "Turkish Airlines",
     "aircraft": "Boeing 777-300ER",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D4C8F1",
@@ -669,7 +669,7 @@
     },
     "airline": "Air Canada",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E8B3A6",
@@ -693,7 +693,7 @@
     },
     "airline": "Emirates",
     "aircraft": "Airbus A380-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F2D7C9",
@@ -717,7 +717,7 @@
     },
     "airline": "United Airlines",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "A6E9F4",
@@ -741,7 +741,7 @@
     },
     "airline": "Lufthansa",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B3C7D5",
@@ -765,7 +765,7 @@
     },
     "airline": "British Airways",
     "aircraft": "Boeing 777-300ER",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "C8F1A2",
@@ -789,7 +789,7 @@
     },
     "airline": "Air France",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D7A4B9",
@@ -813,7 +813,7 @@
     },
     "airline": "Singapore Airlines",
     "aircraft": "Airbus A350-900",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E2C9F6",
@@ -837,7 +837,7 @@
     },
     "airline": "Qantas",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F9D3E1",
@@ -861,7 +861,7 @@
     },
     "airline": "American Airlines",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "A5B8C4",
@@ -885,7 +885,7 @@
     },
     "airline": "Delta Air Lines",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B1F6D7",
@@ -909,7 +909,7 @@
     },
     "airline": "KLM",
     "aircraft": "Boeing 737-800",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "C7E2A9",
@@ -933,7 +933,7 @@
     },
     "airline": "Cathay Pacific",
     "aircraft": "Airbus A350-900",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D3A8F5",
@@ -957,7 +957,7 @@
     },
     "airline": "Japan Airlines",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E9C4B1",
@@ -981,7 +981,7 @@
     },
     "airline": "Turkish Airlines",
     "aircraft": "Airbus A330-300",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F4D7C2",
@@ -1005,7 +1005,7 @@
     },
     "airline": "Air Canada",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "A8C3E6",
@@ -1029,7 +1029,7 @@
     },
     "airline": "Emirates",
     "aircraft": "Boeing 777-300ER",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "B9F2D4",
@@ -1053,7 +1053,7 @@
     },
     "airline": "United Airlines",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "C5A1E8",
@@ -1077,7 +1077,7 @@
     },
     "airline": "Lufthansa",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "D6B7F3",
@@ -1101,7 +1101,7 @@
     },
     "airline": "British Airways",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "E1C8A4",
@@ -1125,7 +1125,7 @@
     },
     "airline": "Air France",
     "aircraft": "Airbus A320neo",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "F7D2C9",
@@ -1149,7 +1149,7 @@
     },
     "airline": "Singapore Airlines",
     "aircraft": "Airbus A350-900",
-    "status": "active"
+    "status": "on time"
   },
   {
     "icao24": "A3E6B5",
@@ -1173,6 +1173,6 @@
     },
     "airline": "Qantas",
     "aircraft": "Boeing 787-9",
-    "status": "active"
+    "status": "on time"
   }
 ]
